@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe Box</title>
+        <!--meta-->
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+        
+        <!--css-->
+        <link rel="stylesheet" href="{% static 'mainPage/css/mainTemple.css' %}">
+        <link rel="stylesheet" href="{% static 'mainPage/css/mainPage.css' %}">
+        <link rel="stylesheet" href="{% static 'mainPage/css/welcomStyle.css' %}">
+        
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!--jQuery-->
+        <script src="{% static 'mainPage/js/jquery.js' %}"></script>
+        
+    </head>
+    <body>
+        <header>
+            <section>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                        <span id="logo">Recipe BOX</span>
+                    </div>
+                    <div class="col-sm">
+                        <span>Second part</span>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#"><button type="button" class='btn-success'>LogIn</button></a>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </header>
+        
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        
+        <footer>FOOTER</footer>
+    </body>
+</html>

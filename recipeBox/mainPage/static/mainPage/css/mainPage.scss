@@ -1,0 +1,38 @@
+$text-color: #EBEEF2;
+
+@mixin backImg($path){
+    background-image: url($path);
+    background-repeat: no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+}
+.center{
+        margin: auto;
+        text-align: center;
+}
+.welcom{
+    @include backImg('/static/mainPage/img/welcome.jpg');
+    height: 850px;
+    color: $text-color;
+    display: flex;
+}
+.isVegan{
+    background-color: #273440;
+    .vegan{
+        @include backImg('/static/mainPage/img/vegan.jpg');
+        float:left;
+        width:50%;
+        height:350px;
+    }
+    .notVegan{
+        @include backImg('/static/mainPage/img/vegan.jpg');
+        float:right;
+        width:50%;
+        height:350px;
+    }
+    p{
+        color: $text-color;
+    }
+}

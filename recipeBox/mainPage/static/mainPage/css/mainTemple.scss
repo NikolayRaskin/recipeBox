@@ -1,0 +1,33 @@
+$headerBack-color: #273440;
+$text-color: #EBEEF2;
+$headerHeight: 70px;
+
+header,footer{
+    color: $text-color;
+    background-color: $headerBack-color;
+    text-align: center;
+}
+header{
+    height: $headerHeight;
+    
+    .col-sm{
+        height: $headerHeight;
+        display: flex;
+    }
+    span{
+        font-family: 'Dancing Script', cursive;
+        margin: auto;
+    }
+    #logo{
+        font-size: 27px;
+    }
+    a{
+        margin: auto;
+        button{
+            width: 100px;
+        }
+    }
+}
+footer{
+    
+}

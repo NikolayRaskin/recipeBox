@@ -1,0 +1,48 @@
+svg.intro {
+  .text { 
+    display: none;
+    font-size: 30px;
+  }
+  &.go {
+    .text {
+      font-family: 'Arial', cursive;
+      font-size: 20px;
+      text-transform: uppercase;
+      display: block;
+    }
+    .text-stroke {
+      fill: none;
+      stroke: #EBEEF2;
+      stroke-width: 2.8px;
+      stroke-dashoffset: -900;
+      stroke-dasharray: 9000;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      animation: dash 1.3s ease-in-out forwards;
+    }
+    .text-stroke:nth-child(2) {
+      animation-delay: .3s;
+    }
+    .text-stroke:nth-child(3) {
+      animation-delay: .9s;
+    }
+  }
+}
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.reload {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border: none;
+  border-radius: 20px;
+  outline: none!important;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

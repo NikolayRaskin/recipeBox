@@ -1,0 +1,28 @@
+header, footer {
+  color: #EBEEF2;
+  background-color: #273440;
+  text-align: center;
+}
+
+header {
+  height: 70px;
+}
+header .col-sm {
+  height: 70px;
+  display: flex;
+}
+header span {
+  font-family: "Dancing Script", cursive;
+  margin: auto;
+}
+header #logo {
+  font-size: 27px;
+}
+header a {
+  margin: auto;
+}
+header a button {
+  width: 100px;
+}
+
+/*# sourceMappingURL=mainTemple.css.map */

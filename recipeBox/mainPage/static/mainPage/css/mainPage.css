@@ -1,0 +1,47 @@
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.welcom {
+  background-image: url("/static/mainPage/img/welcome.jpg");
+  background-repeat: no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  height: 850px;
+  color: #EBEEF2;
+  display: flex;
+}
+
+.isVegan {
+  background-color: #273440;
+}
+.isVegan .vegan {
+  background-image: url("/static/mainPage/img/vegan.jpg");
+  background-repeat: no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  float: left;
+  width: 50%;
+  height: 350px;
+}
+.isVegan .notVegan {
+  background-image: url("/static/mainPage/img/vegan.jpg");
+  background-repeat: no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  float: right;
+  width: 50%;
+  height: 350px;
+}
+.isVegan p {
+  color: #EBEEF2;
+}
+
+/*# sourceMappingURL=mainPage.css.map */

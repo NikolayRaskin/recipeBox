@@ -1,0 +1,38 @@
+{% extends 'mainPage/mainTemple.html' %}
+{% load static %}
+{% block content %}
+    <section class="welcom">
+        <div class="center">
+            <svg class="intro">
+              <text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Hello</text>
+              <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Would you like to cook</text>
+              <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Something?</text>
+
+              <defs>
+                <clipPath id="text1">
+                  <text text-anchor="start" x="10" y="30" class="text">Hello</text>
+                </clipPath>
+                <clipPath id="text2">
+                  <text text-anchor="start" x="10" y="50" class="text">Would you like to cook</text>
+                </clipPath>
+                <clipPath id="text3">
+                  <text text-anchor="start" x="10" y="70" class="text">Something?</text>
+                </clipPath>
+              </defs>
+            </svg>
+        </div>
+    </section>
+    
+    <section class="isVegan">
+        <div>
+            <span>Who am I?</span>
+        </div>
+        <div class='vegan'>
+            <p>Vegan</p>
+        </div>
+        <div class='notVegan'>
+            <p>Isn't vegan</p>
+        </div>
+    </section>
+    <script src="{% static 'mainPage/js/welcomJs.js' %}"></script>
+{% endblock %}
