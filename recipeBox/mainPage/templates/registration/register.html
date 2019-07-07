@@ -9,6 +9,23 @@
                         <p>Логин:<br> {{form.user_name}}</p>
                         <p>Email:<br> {{form.user_email}}</p>
                         <p>Пароль:<br> {{form.password}}</p>
+                        
+                        
+                        <!-- Example single danger button -->
+                        <div class="btn-group">
+                          <button id="req" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Требования к паролю
+                          </button>
+                          <div class="dropdown-menu" style="width:400px;">
+                            <ul>
+                                <li>Пароль должен содержать не меньше 8 символов.</li>
+                                <li>Пароль должен содержать хотя бы одну цифру.</li>
+                                <li>Пароль должен содержать хотя бы одну заглавную букву.</li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        
                         <p>Подтвердите пароль:<br> {{form.confirm_password}}</p>
                         {% if messages %}
                             {% for message in messages %}
@@ -16,9 +33,6 @@
                             {% endfor %}
                         {% endif %}
                         <div style="display:flex;"><button type="submit">Зарегистрироваться</button></div>
-                        {% if form.email.errors %}
-                                <span style="color:red;">Некорректный Email!</span>
-                        {% endif %}
                             
                         {% if form.errors %}
                                 <span style="color:red;">Ошибка формы!</span>

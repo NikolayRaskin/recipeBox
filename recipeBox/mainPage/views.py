@@ -7,6 +7,7 @@ from .regForm import RegForm
 
 from django.contrib import messages
 
+import re
 
 def mainPage(request):
     return render(request,'mainPage/mainPage.html')
@@ -33,9 +34,19 @@ def register(request):
                 messages.info(request, 'Заданный пароль и подтверждение пароля не совпадают!')
                 return HttpResponseRedirect('/register/')
             else:
-                user = User.objects.create_user(user_name, user_email, user_pass)
-                login(request,user)
-                return redirect('/')
+                if len(user_pass) < 8:
+                    messages.info(request, 'Пароль должен содержать не меньше 8 символов!')
+                    return HttpResponseRedirect('/register/')
+                elif re.search('[0-9]',user_pass) is None:
+                    messages.info(request, 'Пароль должен содержать хотя бы одну цифру!')
+                    return HttpResponseRedirect('/register/')
+                elif re.search('[A-Z]',user_pass) is None:
+                    messages.info(request, 'Пароль должен содержать хотя бы одну заглавную букву!')
+                    return HttpResponseRedirect('/register/')
+                else:
+                    user = User.objects.create_user(user_name, user_email, user_pass)
+                    login(request,user)
+                    return redirect('/')
     else:
         form = RegForm()
     return render(request,'registration/register.html',{'form':form})

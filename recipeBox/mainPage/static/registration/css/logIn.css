@@ -15,6 +15,9 @@
 .out .in form input {
   width: 300px;
 }
+.out .in form #req {
+  width: 300px;
+}
 .out .in form button {
   width: 250px;
   margin: auto;
