@@ -23,16 +23,25 @@
         </div>
     </section>
     
-    <section class="isVegan">
-        <div>
-            <span>Who am I?</span>
+    <section class="chooseCountry"><br>
+        <div style="display:flex"><span style="margin:auto;"><h2>World cuisines</h2></span></div>
+        <div class="countres">
+            <div class="left">
+                <div class='dish'><span><img src='{% static "mainPage/img/americanDish.jpg" %}' alt='american dish'> <font class='text'>American</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/greekDish.jpg" %}' alt='Greek dish'> <font class='text'>Greek</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/koreanDish.jpeg" %}' alt='Korean dish'> <font class='text'>Korean</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/mexicanDish.jpg" %}' alt='Mexican dish'> <font class='text'>Mexican</font></span></div>
+            </div>
+            <div class="right">
+                <div class='dish'><span><img src='{% static "mainPage/img/italianDish.jpg" %}' alt='Italian dish'> <font class='text'>Italian</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/asianDish.jpg" %}' alt='Asian dish'> <font class='text'>Asian</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/latinDish.jpg" %}' alt='Latin dish'> <font class='text'>Latin</font></span></div>
+                <div class='dish'><span><img src='{% static "mainPage/img/russianDish.jpg" %}' alt='Russian dish'> <font class='text'>Russian</font></span></div>
+            </div>
         </div>
-        <div class='vegan'>
-            <p>Vegan</p>
-        </div>
-        <div class='notVegan'>
-            <p>Isn't vegan</p>
-        </div>
+    </section>
+    <section class="popularRecipes">
+        <div style="display:flex"><span style="margin:auto;"><h2>Most popular recipes</h2></span></div>
     </section>
     <script src="{% static 'mainPage/js/welcomJs.js' %}"></script>
 {% endblock %}

@@ -1,1 +1,2 @@
-# recipeBox
+Recipe Box
+Collection of recipes.

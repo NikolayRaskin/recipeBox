@@ -15,33 +15,47 @@
   display: flex;
 }
 
-.isVegan {
+.chooseCountry {
   background-color: #273440;
+  height: 100%;
+  color: #EBEEF2;
 }
-.isVegan .vegan {
-  background-image: url("/static/mainPage/img/vegan.jpg");
-  background-repeat: no-repeat;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+.chooseCountry .countres {
+  margin: 50px;
+  font-size: 18px;
+  height: 330px;
+}
+.chooseCountry .countres .left {
   float: left;
   width: 50%;
-  height: 350px;
+  height: 320px;
 }
-.isVegan .notVegan {
-  background-image: url("/static/mainPage/img/vegan.jpg");
-  background-repeat: no-repeat;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+.chooseCountry .countres .left div {
+  margin-top: 10px;
+}
+.chooseCountry .countres .right {
   float: right;
   width: 50%;
-  height: 350px;
+  height: 320px;
 }
-.isVegan p {
-  color: #EBEEF2;
+.chooseCountry .countres .right div {
+  margin-top: 10px;
+}
+.chooseCountry .countres img {
+  width: 100px;
+  height: 70px;
+  border-radius: 360px;
+}
+.chooseCountry .countres .dish {
+  display: flex;
+}
+.chooseCountry .countres .dish span {
+  margin: auto;
+  width: 200px;
+  height: 70px;
+}
+.chooseCountry .countres .dish span .text {
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=mainPage.css.map */

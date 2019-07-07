@@ -9,6 +9,8 @@ header,footer{
 }
 header{
     height: $headerHeight;
+    position: fixed;
+    width: 100%;
     
     .col-sm{
         height: $headerHeight;

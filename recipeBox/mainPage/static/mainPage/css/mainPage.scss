@@ -1,4 +1,5 @@
 $text-color: #EBEEF2;
+$back-color: #273440;
 
 @mixin backImg($path){
     background-image: url($path);
@@ -18,21 +19,45 @@ $text-color: #EBEEF2;
     color: $text-color;
     display: flex;
 }
-.isVegan{
-    background-color: #273440;
-    .vegan{
-        @include backImg('/static/mainPage/img/vegan.jpg');
-        float:left;
-        width:50%;
-        height:350px;
-    }
-    .notVegan{
-        @include backImg('/static/mainPage/img/vegan.jpg');
-        float:right;
-        width:50%;
-        height:350px;
-    }
-    p{
-        color: $text-color;
+.chooseCountry{
+    background-color: $back-color;
+    height: 100%;
+    color: $text-color;
+    .countres{
+        margin: 50px;
+        font-size: 18px;
+        height: 330px;
+        .left{
+            float: left;
+            width: 50%;
+            height:320px;
+            div{
+                margin-top:10px;
+            }
+        }
+        .right{
+            float: right;
+            width: 50%;
+            height:320px;
+            div{
+                margin-top:10px;
+            }
+        }
+        img{
+            width: 100px;
+            height: 70px;
+            border-radius: 360px;
+        }
+        .dish{
+            display: flex;
+            span{
+                margin: auto;
+                width: 200px;
+                height: 70px;
+                .text{
+                    margin-left: 5px;
+                }
+            }
+        }
     }
 }
