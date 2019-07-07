@@ -22,28 +22,61 @@
             </svg>
         </div>
     </section>
+    
     <section class="chooseCountry"><br>
         <div class="revealator-fadein revealator-slideup revealator-once revealator-delay1 revealator-duration5">
             <div style="display:flex"><span style="margin:auto;"><h2>World cuisines</h2></span></div>
-            <div class="countres">
-                <div class="left">
-                    <div class='dish'><span><img src='{% static "mainPage/img/americanDish.jpg" %}' alt='american dish'> <font class='text'>American</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/greekDish.jpg" %}' alt='Greek dish'> <font class='text'>Greek</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/koreanDish.jpeg" %}' alt='Korean dish'> <font class='text'>Korean</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/mexicanDish.jpg" %}' alt='Mexican dish'> <font class='text'>Mexican</font></span></div>
+        
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+              <div class="carousel-inner">
+               <!--  111111111111111111111111111111111111 -->
+                <div class="carousel-item active" data-interval="false">
+                  <div class="countres">
+                    <div class="left">
+                        <div class='dish'><span><img src='{% static "mainPage/img/americanDish.jpg" %}' alt='American dish'> <font class='text'>American</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/greekDish.jpg" %}' alt='Greek dish'> <font class='text'>Greek</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/koreanDish.jpeg" %}' alt='Korean dish'> <font class='text'>Korean</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/mexicanDish.jpg" %}' alt='Mexican dish'> <font class='text'>Mexican</font></span></div>
+                    </div>
+                    <div class="right">
+                        <div class='dish'><span><img src='{% static "mainPage/img/italianDish.jpg" %}' alt='Italian dish'> <font class='text'>Italian</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/asianDish.jpg" %}' alt='Asian dish'> <font class='text'>Asian</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/latinDish.jpg" %}' alt='Latin dish'> <font class='text'>Latin</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/russianDish.jpg" %}' alt='Russian dish'> <font class='text'>Russian</font></span></div>
+                    </div>
+                 </div>
                 </div>
-                <div class="right">
-                    <div class='dish'><span><img src='{% static "mainPage/img/italianDish.jpg" %}' alt='Italian dish'> <font class='text'>Italian</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/asianDish.jpg" %}' alt='Asian dish'> <font class='text'>Asian</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/latinDish.jpg" %}' alt='Latin dish'> <font class='text'>Latin</font></span></div>
-                    <div class='dish'><span><img src='{% static "mainPage/img/russianDish.jpg" %}' alt='Russian dish'> <font class='text'>Russian</font></span></div>
+                <!--  22222222222222222222222222222222222 -->
+                <div class="carousel-item" data-interval="false">
+                  <div class="countres">
+                    <div class="left">
+                        <div class='dish'><span><img src='{% static "mainPage/img/germanDish.jpg" %}' alt='German dish'> <font class='text'>German</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/chineseDish.jpeg" %}' alt='Chinese dish'> <font class='text'>Chinese</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/japaneseDish.jpg" %}' alt='Japanese dish'> <font class='text'>Japanese</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/africanDish.jpg" %}' alt='African dish'> <font class='text'>African</font></span></div>
+                    </div>
+                    <div class="right">
+                        <div class='dish'><span><img src='{% static "mainPage/img/indianDish.jpg" %}' alt='Indian dish'> <font class='text'>Indian</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/frenchDish.jpg" %}' alt='French dish'> <font class='text'>French</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/thaiDish.jpg" %}' alt='Thai dish'> <font class='text'>Thai</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/cubanDish.jpg" %}' alt='Cuban dish'> <font class='text'>Cuban</font></span></div>
+                    </div>
+                 </div>
                 </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
         </div>
     </section>
+    
     <section class="popularRecipes">
         <div style="display:flex"><span style="margin:auto;"><h2>Most popular recipes</h2></span></div>
     </section>
-    <script src="{% static 'mainPage/js/welcomJs.js' %}"></script>
-    <script src="{% static 'mainPage/js/fm.revealator.jquery.js' %}"></script>
 {% endblock %}
