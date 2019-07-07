@@ -33,6 +33,10 @@ $back-color: #273440;
             height:320px;
             div{
                 margin-top:10px;
+                &:hover{
+                    background-color: #F2B705;
+                    transition: 1s;
+                }
             }
         }
         .right{
@@ -41,6 +45,10 @@ $back-color: #273440;
             height:320px;
             div{
                 margin-top:10px;
+                &:hover{
+                    background-color: #F2B705;
+                    transition: 1s;
+                }
             }
         }
         img{
@@ -60,4 +68,9 @@ $back-color: #273440;
             }
         }
     }
+}
+.popularRecipes{
+    background-color: $back-color;
+    height: 100%;
+    color: $text-color;
 }

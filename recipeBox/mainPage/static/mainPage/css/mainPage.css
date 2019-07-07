@@ -33,6 +33,10 @@
 .chooseCountry .countres .left div {
   margin-top: 10px;
 }
+.chooseCountry .countres .left div:hover {
+  background-color: #F2B705;
+  transition: 1s;
+}
 .chooseCountry .countres .right {
   float: right;
   width: 50%;
@@ -40,6 +44,10 @@
 }
 .chooseCountry .countres .right div {
   margin-top: 10px;
+}
+.chooseCountry .countres .right div:hover {
+  background-color: #F2B705;
+  transition: 1s;
 }
 .chooseCountry .countres img {
   width: 100px;
@@ -56,6 +64,12 @@
 }
 .chooseCountry .countres .dish span .text {
   margin-left: 5px;
+}
+
+.popularRecipes {
+  background-color: #273440;
+  height: 100%;
+  color: #EBEEF2;
 }
 
 /*# sourceMappingURL=mainPage.css.map */
