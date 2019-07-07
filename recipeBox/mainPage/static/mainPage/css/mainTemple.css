@@ -1,29 +1,33 @@
-header, footer {
+.header, .footer {
   color: #EBEEF2;
   background-color: #273440;
   text-align: center;
 }
 
-header {
+.header {
   height: 70px;
-  position: fixed;
   width: 100%;
 }
-header .col-sm {
+.header .col-sm {
   height: 70px;
   display: flex;
 }
-header span {
+.header span {
   font-family: "Dancing Script", cursive;
   margin: auto;
 }
-header #logo {
+.header #logo {
   font-size: 27px;
 }
-header a {
+.header a {
   margin: auto;
+  text-decoration: none;
+  color: #EBEEF2;
 }
-header a button {
+.header a:hover {
+  text-decoration: none;
+}
+.header a button {
   width: 100px;
 }
 

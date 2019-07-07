@@ -54,12 +54,16 @@
   height: 70px;
   border-radius: 360px;
 }
+.chooseCountry .countres img:hover {
+  width: 200px;
+  transition: 1s;
+}
 .chooseCountry .countres .dish {
   display: flex;
 }
 .chooseCountry .countres .dish span {
   margin: auto;
-  width: 200px;
+  width: 250px;
   height: 70px;
 }
 .chooseCountry .countres .dish span .text {
@@ -70,6 +74,41 @@
   background-color: #273440;
   height: 100%;
   color: #EBEEF2;
+}
+.popularRecipes .cards {
+  display: flex;
+}
+.popularRecipes .card {
+  display: inline-block;
+  margin: auto;
+}
+
+.easyToCook {
+  background-color: #273440;
+  height: 100%;
+  color: #EBEEF2;
+  padding-top: 20px;
+}
+.easyToCook .cards {
+  display: flex;
+}
+.easyToCook .card {
+  display: inline-block;
+  margin: auto;
+}
+
+.forFamily {
+  background-color: #273440;
+  height: 100%;
+  color: #EBEEF2;
+  padding-top: 20px;
+}
+.forFamily .cards {
+  display: flex;
+}
+.forFamily .card {
+  display: inline-block;
+  margin: auto;
 }
 
 /*# sourceMappingURL=mainPage.css.map */

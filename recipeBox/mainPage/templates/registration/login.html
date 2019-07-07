@@ -1,0 +1,26 @@
+{% extends 'mainPage/mainTemple.html' %}
+{%  block content %}
+    <div class="out">
+            <div class="in">
+                <div style="margin:auto">
+                    <h1 style="display:flex; padding-bottom:40px;"><span style="margin:auto">Вход</span></h1>
+                    <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                        <p>Логин:<br> {{form.username}}</p>
+                        <p>Пароль*:<br> {{form.password}}</p>
+                        <div style="display:flex;"><button type="submit">Войти</button></div>
+                        <div class="forgotPass"><a href="#">Забыли пароль?</a></div>
+                        {% if form.errors %}
+                            <span style="color:red;">Неверный логин или пароль!</span>
+                        {% endif %}
+
+                        {% if next %}
+                            <span style="color:red;">Сначала войдите в систему!</span>
+                        {% endif %}
+                        <br><hr color='#EBEEF2'><br>
+                        <div style="display:flex;"><p style="margin:auto;">Нет аккаунта? <a href='/register/'>Зарегистрироваться.</a></p></div>
+                    </form>
+                </div>
+            </div>
+    </div>
+{% endblock %}

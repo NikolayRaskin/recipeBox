@@ -1,0 +1,24 @@
+{% extends 'mainPage/mainTemple.html' %}
+{%  block content %}
+    <div class="out">
+            <div class="in">
+                <div style="margin:auto">
+                    <h1 style="display:flex; padding-bottom:40px;"><span style="margin:auto">Регистрация</span></h1>
+                    <form method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+                        {{form.as_p}}
+                        <div style="display:flex;"><button type="submit">Зарегистрироваться</button></div>
+                        {% if form.errors %}
+                            <span style="color:red;">Ошибка формы!</span>
+                        {% endif %}
+
+                        {% if next %}
+                            <span style="color:red;">Сначала войдите в систему!</span>
+                        {% endif %}
+                        <br><hr color='#EBEEF2'><br>
+                        <div style="display:flex;"><a style="margin:auto;" href='/accounts/login/'>Назад</a></div>
+                    </form>
+                </div>
+            </div>
+    </div>
+{% endblock %}

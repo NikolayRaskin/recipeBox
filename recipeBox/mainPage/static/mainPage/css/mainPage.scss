@@ -1,5 +1,6 @@
 $text-color: #EBEEF2;
 $back-color: #273440;
+//$back-color: #403531;
 
 @mixin backImg($path){
     background-image: url($path);
@@ -55,12 +56,15 @@ $back-color: #273440;
             width: 100px;
             height: 70px;
             border-radius: 360px;
+            &:hover{
+                transition: 1s;
+            }
         }
         .dish{
             display: flex;
             span{
                 margin: auto;
-                width: 200px;
+                width: 250px;
                 height: 70px;
                 .text{
                     margin-left: 5px;
@@ -73,4 +77,39 @@ $back-color: #273440;
     background-color: $back-color;
     height: 100%;
     color: $text-color;
+    .cards{
+        display: flex;
+    }
+    .card{
+        display: inline-block;
+        margin: auto;
+    }
+}
+
+.easyToCook{
+    background-color: $back-color;
+    height: 100%;
+    color: $text-color;
+    padding-top: 20px;
+    .cards{
+        display: flex;
+    }
+    .card{
+        display: inline-block;
+        margin: auto;
+    }
+}
+
+.forFamily{
+    background-color: $back-color;
+    height: 100%;
+    color: $text-color;
+    padding-top: 20px;
+    .cards{
+        display: flex;
+    }
+    .card{
+        display: inline-block;
+        margin: auto;
+    }
 }

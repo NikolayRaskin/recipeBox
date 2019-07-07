@@ -2,14 +2,14 @@ $headerBack-color: #273440;
 $text-color: #EBEEF2;
 $headerHeight: 70px;
 
-header,footer{
+.header,.footer{
     color: $text-color;
     background-color: $headerBack-color;
     text-align: center;
 }
-header{
+.header{
     height: $headerHeight;
-    position: fixed;
+    //position: fixed;
     width: 100%;
     
     .col-sm{
@@ -25,11 +25,17 @@ header{
     }
     a{
         margin: auto;
+        text-decoration: none;
+        color: $text-color;
+        &:hover{
+            text-decoration: none;
+            //color: $text-color;
+        }
         button{
             width: 100px;
         }
     }
 }
-footer{
+.footer{
     
 }

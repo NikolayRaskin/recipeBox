@@ -4,19 +4,25 @@
     <section class="welcom">
         <div class="center">
             <svg class="intro">
+              <text text-anchor="start" x="110" y="30" class="text text-stroke" clip-path="url(#text1)">Привет</text>
+              <text text-anchor="start" x="1" y="50" class="text text-stroke" clip-path="url(#text2)">Не хотите ли приготовить</text>
+              <text text-anchor="start" x="80" y="70" class="text text-stroke" clip-path="url(#text3)">Что-нибудь :) ?</text>
+              
+<!--
               <text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Hello</text>
               <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Would you like to cook</text>
               <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Something?</text>
+-->
 
               <defs>
                 <clipPath id="text1">
-                  <text text-anchor="start" x="10" y="30" class="text">Hello</text>
+                  <text text-anchor="start" x="110" y="30" class="text">Привет</text>
                 </clipPath>
                 <clipPath id="text2">
-                  <text text-anchor="start" x="10" y="50" class="text">Would you like to cook</text>
+                  <text text-anchor="start" x="1" y="50" class="text">Не хотите ли приготовить</text>
                 </clipPath>
                 <clipPath id="text3">
-                  <text text-anchor="start" x="10" y="70" class="text">Something?</text>
+                  <text text-anchor="start" x="80" y="70" class="text">Что-нибудь :) ?</text>
                 </clipPath>
               </defs>
             </svg>
@@ -25,7 +31,8 @@
     
     <section class="chooseCountry"><br>
         <div class="revealator-fadein revealator-slideup revealator-once revealator-delay1 revealator-duration5">
-            <div style="display:flex"><span style="margin:auto;"><h2>World cuisines</h2></span></div>
+            <!--<div style="display:flex"><span style="margin:auto;"><h2>World cuisines</h2></span></div>-->
+            <div style="display:flex"><span style="margin:auto;"><h2>Мировая кухня</h2></span></div>
         
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
               <div class="carousel-inner">
@@ -33,16 +40,16 @@
                 <div class="carousel-item active" data-interval="false">
                   <div class="countres">
                     <div class="left">
-                        <div class='dish'><span><img src='{% static "mainPage/img/americanDish.jpg" %}' alt='American dish'> <font class='text'>American</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/greekDish.jpg" %}' alt='Greek dish'> <font class='text'>Greek</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/koreanDish.jpeg" %}' alt='Korean dish'> <font class='text'>Korean</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/mexicanDish.jpg" %}' alt='Mexican dish'> <font class='text'>Mexican</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/americanDish.jpg" %}' alt='American dish'> <font class='text'>Американская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/greekDish.jpg" %}' alt='Greek dish'> <font class='text'>Греческая</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/koreanDish.jpeg" %}' alt='Korean dish'> <font class='text'>Корейская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/mexicanDish.jpg" %}' alt='Mexican dish'> <font class='text'>Мексиканская</font></span></div>
                     </div>
                     <div class="right">
-                        <div class='dish'><span><img src='{% static "mainPage/img/italianDish.jpg" %}' alt='Italian dish'> <font class='text'>Italian</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/asianDish.jpg" %}' alt='Asian dish'> <font class='text'>Asian</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/latinDish.jpg" %}' alt='Latin dish'> <font class='text'>Latin</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/russianDish.jpg" %}' alt='Russian dish'> <font class='text'>Russian</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/italianDish.jpg" %}' alt='Italian dish'> <font class='text'>Итальянская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/asianDish.jpg" %}' alt='Asian dish'> <font class='text'>Азиатская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/latinDish.jpg" %}' alt='Latin dish'> <font class='text'>Латинская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/russianDish.jpg" %}' alt='Russian dish'> <font class='text'>Русская</font></span></div>
                     </div>
                  </div>
                 </div>
@@ -50,16 +57,16 @@
                 <div class="carousel-item" data-interval="false">
                   <div class="countres">
                     <div class="left">
-                        <div class='dish'><span><img src='{% static "mainPage/img/germanDish.jpg" %}' alt='German dish'> <font class='text'>German</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/chineseDish.jpeg" %}' alt='Chinese dish'> <font class='text'>Chinese</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/japaneseDish.jpg" %}' alt='Japanese dish'> <font class='text'>Japanese</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/africanDish.jpg" %}' alt='African dish'> <font class='text'>African</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/germanDish.jpg" %}' alt='German dish'> <font class='text'>Немецкая</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/chineseDish.jpeg" %}' alt='Chinese dish'> <font class='text'>Китайская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/japaneseDish.jpg" %}' alt='Japanese dish'> <font class='text'>Японская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/africanDish.jpg" %}' alt='African dish'> <font class='text'>Африканская</font></span></div>
                     </div>
                     <div class="right">
-                        <div class='dish'><span><img src='{% static "mainPage/img/indianDish.jpg" %}' alt='Indian dish'> <font class='text'>Indian</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/frenchDish.jpg" %}' alt='French dish'> <font class='text'>French</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/thaiDish.jpg" %}' alt='Thai dish'> <font class='text'>Thai</font></span></div>
-                        <div class='dish'><span><img src='{% static "mainPage/img/cubanDish.jpg" %}' alt='Cuban dish'> <font class='text'>Cuban</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/indianDish.jpg" %}' alt='Indian dish'> <font class='text'>Индусская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/frenchDish.jpg" %}' alt='French dish'> <font class='text'>Французская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/thaiDish.jpg" %}' alt='Thai dish'> <font class='text'>Тайская</font></span></div>
+                        <div class='dish'><span><img src='{% static "mainPage/img/cubanDish.jpg" %}' alt='Cuban dish'> <font class='text'>Кубанская</font></span></div>
                     </div>
                  </div>
                 </div>
@@ -77,6 +84,136 @@
     </section>
     
     <section class="popularRecipes">
-        <div style="display:flex"><span style="margin:auto;"><h2>Most popular recipes</h2></span></div>
+        <!--<div style="display:flex"><span style="margin:auto;"><h2>Most popular recipes</h2></span></div>-->
+        <div style="display:flex"><span style="margin:auto;"><h2>Наиболее популярные рецепты</h2></span></div>
+        
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+        </div>
+        
+        <footer><div style="display:flex"><span style="margin:auto;">Показать больше...</span></div></footer>
+    </section>
+    
+    <section class="easyToCook">
+        <div style="display:flex"><span style="margin:auto;"><h2>Легко приготовить</h2></span></div>
+        
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+        </div>
+        <footer><div style="display:flex"><span style="margin:auto;">Показать больше...</span></div></footer>
+    </section>
+    
+    <section class="forFamily">
+        <div style="display:flex"><span style="margin:auto;"><h2>Для всей семьи</h2></span></div>
+        
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                <br><br><footer>[callories]+[Time for cook]</footer>
+              </div>
+            </div>
+        </div>
+        <footer><div style="display:flex"><span style="margin:auto;">Показать больше...</span></div></footer>
     </section>
 {% endblock %}

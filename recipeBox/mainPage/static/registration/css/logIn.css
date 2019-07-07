@@ -1,0 +1,47 @@
+.out {
+  background-color: #273440;
+  display: flex;
+  color: #EBEEF2;
+}
+.out .in {
+  margin: auto;
+  height: 650px;
+  width: 500px;
+  display: flex;
+}
+.out .in form {
+  margin: auto;
+}
+.out .in form input {
+  width: 300px;
+}
+.out .in form button {
+  width: 250px;
+  margin: auto;
+  background-color: #F2B705;
+  border-color: #F2B705;
+}
+.out .in form button:hover {
+  background-color: #F29F05;
+  border-color: #F29F05;
+}
+.out .in form .forgotPass a {
+  text-decoration: none;
+  color: #3E59;
+  float: right;
+  padding-top: 10px;
+}
+.out .in form .forgotPass a:hover {
+  color: #3E5902;
+}
+.out .in form a {
+  text-decoration: none;
+}
+.out .in form a:hover {
+  text-decoration: underline;
+}
+.out .in form p label {
+  width: 60px;
+}
+
+/*# sourceMappingURL=logIn.css.map */

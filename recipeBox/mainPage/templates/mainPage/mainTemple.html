@@ -7,14 +7,19 @@
         <meta charset="utf-8">
         <meta content="width=device-width" name="viewport">
         
-        <!--fonts-->
+        <!--google's fonts-->
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+        
+        <!-- google's icon -->
+        <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
         
         <!--css-->
         <link rel="stylesheet" href="{% static 'mainPage/css/mainTemple.css' %}">
         <link rel="stylesheet" href="{% static 'mainPage/css/mainPage.css' %}">
         <link rel="stylesheet" href="{% static 'mainPage/css/welcomStyle.css' %}">
         <link rel="stylesheet" href="{% static 'mainPage/css/fm.revealator.jquery.css' %}">
+        <link rel="stylesheet" href="{% static 'mainPage/css/goTop.css' %}">
+        <link rel="stylesheet" href="{% static 'registration/css/logIn.css' %}">
         
         <!--bootstrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,19 +29,23 @@
         
     </head>
     <body>
-        <header>
+        <header class="header">
             <section>
                 <div class="container">
                   <div class="row">
                     <div class="col-sm">
-                        <span id="logo">Recipe BOX</span>
+                        <a href="/"><span id="logo">Recipe BOX</span></a>
                     </div>
                     <div class="col-sm">
                         <span>Second part</span>
                     </div>
                     <div class="col-sm">
-                        <a href="#"><button type="button" class='btn-success'>LogIn</button></a>
-                        <a href="#"><button type="button" class='btn-success'>SignIn</button></a>
+                        {% if user.is_authenticated %}
+                            <a href="#">Личный кабинет</a>
+                            <!--<a href="/accounts/logout/"><button type="button" class='btn-success'>LogOut</button></a>-->
+                        {% else %}
+                            <a href="/accounts/login/"><button type="button" class='btn-success'>LogIn</button></a>
+                        {% endif %}
                     </div>
                   </div>
                 </div>
@@ -48,8 +57,7 @@
 
             {% endblock %}
         </main>
-        
-        <footer>FOOTER</footer>
+        <footer class="footer">FOOTER</footer>
         
         <!--bootstrap js-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,0 +1,52 @@
+$back-color: #273440;
+$text-color: #EBEEF2;
+.out{
+    background-color: $back-color;
+    display: flex;
+    color: $text-color;
+    .in{
+        //background-color: #636373;
+        margin: auto;
+        height: 650px;
+        width: 500px;
+        display: flex;
+        form{
+            margin: auto;
+            input{
+                width: 300px;
+            }
+            button{
+                width: 250px;
+                margin: auto;
+                background-color: #F2B705;
+                border-color: #F2B705;
+                &:hover{
+                    background-color: #F29F05;
+                    border-color: #F29F05;
+                }
+            }
+            .forgotPass{
+                a{
+                    text-decoration: none;
+                    color: #3E59;
+                    float: right;
+                    padding-top: 10px;
+                    &:hover{
+                        color: #3E5902;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            p{
+                label{
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
