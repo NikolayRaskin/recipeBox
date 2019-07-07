@@ -7,7 +7,7 @@
                     <form method="post" action="{% url 'login' %}">
                     {% csrf_token %}
                         <p>Логин:<br> {{form.username}}</p>
-                        <p>Пароль*:<br> {{form.password}}</p>
+                        <p>Пароль:<br> {{form.password}}</p>
                         <div style="display:flex;"><button type="submit">Войти</button></div>
                         <div class="forgotPass"><a href="#">Забыли пароль?</a></div>
                         {% if form.errors %}
