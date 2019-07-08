@@ -9,7 +9,7 @@
                         <p>Логин:<br> {{form.username}}</p>
                         <p>Пароль:<br> {{form.password}}</p>
                         <div style="display:flex;"><button type="submit">Войти</button></div>
-                        <div class="forgotPass"><a href="#">Забыли пароль?</a></div>
+                        <div class="forgotPass"><a href="/forgot_password">Забыли пароль?</a></div>
                         {% if form.errors %}
                             <span style="color:red;">Неверный логин или пароль!</span>
                         {% endif %}

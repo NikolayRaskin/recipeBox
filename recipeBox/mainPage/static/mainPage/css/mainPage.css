@@ -34,7 +34,7 @@
   margin-top: 10px;
 }
 .chooseCountry .countres .left div:hover {
-  background-color: #F2B705;
+  background-color: #3F4EA6;
   transition: 1s;
 }
 .chooseCountry .countres .right {
@@ -46,7 +46,7 @@
   margin-top: 10px;
 }
 .chooseCountry .countres .right div:hover {
-  background-color: #F2B705;
+  background-color: #3F4EA6;
   transition: 1s;
 }
 .chooseCountry .countres img {

@@ -3,7 +3,11 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.conf import settings
 from .regForm import RegForm
+from .email_passResetForm import EmailPassResetForm
+from .passChangeForm import PassChangeForm
 
 from django.contrib import messages
 
@@ -15,9 +19,9 @@ def mainPage(request):
 def register(request):
     if request.method == 'POST':
         form = RegForm(request.POST)
-        user_name = 0
-        user_email = 0
-        user_pass = 0
+#        user_name = 0
+#        user_email = 0
+#        user_pass = 0
         if form.is_valid():
             user_name = form.cleaned_data['user_name']
             user_email = form.cleaned_data['user_email']
@@ -51,6 +55,51 @@ def register(request):
         form = RegForm()
     return render(request,'registration/register.html',{'form':form})
 
+def forgot_password(request):
+    if request.method == 'POST':
+        form = EmailPassResetForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            if email_exists(email):
+                send_email_for_reset_pass(email)
+                return render(request,'registration/password_reset_sendEmail_done.html')
+            else:
+                messages.info(request, 'Данного email нет в базе!')
+                return HttpResponseRedirect('/forgot_password/')
+    else:
+        form = EmailPassResetForm()
+    return render(request,'registration/password_reset_form.html',{'form':form})
+
+def reset_password(request,user_name):
+    user = User.objects.get(username=user_name)
+    if request.method == 'POST':
+        form = PassChangeForm(request.POST)
+        if form.is_valid():
+            password = form.cleaned_data['password']
+            confirm_password = form.cleaned_data['confirm_password']
+            if password != confirm_password:
+                messages.info(request, 'Заданный пароль и подтверждение пароля не совпадают!')
+                return HttpResponseRedirect('/reset_password/'+user_name)
+            else:
+                if len(password) < 8:
+                    messages.info(request, 'Пароль должен содержать не меньше 8 символов!')
+                    return HttpResponseRedirect('/reset_password/'+user_name)
+                elif re.search('[0-9]',password) is None:
+                    messages.info(request, 'Пароль должен содержать хотя бы одну цифру!')
+                    return HttpResponseRedirect('/reset_password/'+user_name)
+                elif re.search('[A-Z]',password) is None:
+                    messages.info(request, 'Пароль должен содержать хотя бы одну заглавную букву!')
+                    return HttpResponseRedirect('/reset_password/'+user_name)
+                else:
+                    user.set_password(password)
+                    user.save()
+                    return render(request,'registration/pass_change_done.html')
+    else:
+        form = PassChangeForm()
+    return render(request,'registration/pass_change.html',{'form':form,'user_name':str(user_name)})
+        
+        
+        
 def username_exists(user_name):
     if User.objects.filter(username=user_name).exists():
         return True
@@ -61,3 +110,11 @@ def email_exists(user_email):
         return True
     else:
         return False
+    
+def send_email_for_reset_pass(user_email):
+    user = User.objects.filter(email=user_email)[0].get_username()
+    subject = 'Запрос на сброс пароля пользователя: '+user+'.'
+    message = "Вы получили это e-mail, потому что вы отправили запрос на сброс пароля для вашего аккаунта на Recipe Box.\n\nПожалуйста передите по указанной ниже ссылке и выберите новый пароль:\n\nhttp://127.0.0.1:8000/reset_password/"+ user +"\n\nСпасибо, что используете наш сайт!\n\nThe Recipe Box team."
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [user_email]
+    send_mail( subject, message, email_from, recipient_list )

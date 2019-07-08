@@ -1,0 +1,74 @@
+.user_profile {
+  background-color: #273440;
+  color: #EBEEF2;
+  height: 700px;
+}
+.user_profile .left {
+  display: flex;
+  border-right: 1px solid;
+  border-color: #EBEEF2;
+  height: 500px;
+  padding-right: 20px;
+}
+.user_profile .left .content {
+  width: 100%;
+}
+.user_profile .left .content .img {
+  display: flex;
+}
+.user_profile .left .content .img img {
+  margin: auto;
+  width: 100px;
+  border-radius: 180px;
+}
+.user_profile .left .content .user_name {
+  display: flex;
+  padding-top: 20px;
+}
+.user_profile .left .content .subs {
+  display: flex;
+  padding-top: 20px;
+}
+.user_profile .left .content .subs div {
+  margin: auto;
+}
+.user_profile .left .content .subs div p {
+  margin: auto;
+  display: flex;
+}
+.user_profile .left .content .subs div p span {
+  margin: auto;
+}
+.user_profile .left .content .edit {
+  display: flex;
+  padding-top: 20px;
+}
+.user_profile .left .content .edit a button {
+  width: 150px;
+  background-color: #3F4EA6;
+  border-color: #3F4EA6;
+  color: #EBEEF2;
+}
+.user_profile .right {
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
+.user_profile .right .content {
+  margin: auto;
+}
+.user_profile .right .content img {
+  width: 300px;
+  margin: auto;
+}
+.user_profile .right .content p a {
+  margin: auto;
+}
+.user_profile .right .content p a button {
+  width: 150px;
+  background-color: #3F4EA6;
+  border-color: #3F4EA6;
+  color: #EBEEF2;
+}
+
+/*# sourceMappingURL=user_profile.css.map */

@@ -3,10 +3,11 @@
 <div class="out">
     <div class="in">
         <div style="margin:auto;width: 300px;">
-            <h1 style="display:flex; padding-bottom:40px;"><span style="margin:auto">Регистрация</span></h1>
-            <form method="post" action="{% url 'forgot_password' %}">
+            <h1 style="display:flex; padding-bottom:40px;"><span style="margin:auto">Новый пароль</span></h1>
+            <form method="post" action="{% url 'reset_password' user_name %}">
             {% csrf_token %}
-                <p>Email:<br> {{form.email}}</p>
+                <p>Новый пароль:<br> {{form.password}}</p>
+                <p>Подтвердите новый пароль:<br> {{form.confirm_password}}</p>
                 {% if messages %}
                     {% for message in messages %}
                         <p style="color:red;">{{ message }}</p>
@@ -19,8 +20,10 @@
                 
                 <div style="display:flex;"><button type="submit">Сбросить пароль</button></div>
         
+<!--
                 <br><hr color='#EBEEF2'><br>
                 <div style="display:flex;"><a style="margin:auto;" href='/accounts/login/'>Назад</a></div>
+-->
             </form>
         </div>
     </div>

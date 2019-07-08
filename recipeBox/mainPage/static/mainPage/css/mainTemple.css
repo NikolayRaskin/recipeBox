@@ -19,6 +19,22 @@
 .header #logo {
   font-size: 27px;
 }
+.header .user_profile_mainPage {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #EBEEF2;
+  display: flex;
+  width: 70px;
+}
+.header .user_profile_mainPage img {
+  margin: auto;
+  padding: 10px;
+  width: 70px;
+  border-radius: 180px;
+}
+.header .user_profile_mainPage #profileImg {
+  width: 40px;
+}
 .header a {
   margin: auto;
   text-decoration: none;
