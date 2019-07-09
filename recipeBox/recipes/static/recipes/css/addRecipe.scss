@@ -1,0 +1,11 @@
+$text-color: #EBEEF2;
+$back-color: #273440;
+.addForm{
+    background-color: $back-color;
+    color: $text-color;
+    display: flex;
+    padding-top: 5%;
+    div{
+        margin: auto;
+    }
+}

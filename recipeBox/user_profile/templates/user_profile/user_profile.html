@@ -11,7 +11,7 @@
                       <img src="{% static 'user_profile/img/my.jpg' %}">
                   </section>
                   <section class="user_name">
-                      <h3 style="margin:auto;">Nikolay Raskin</h3>
+                      <h3 style="margin:auto;">{{user.first_name}} {{user.last_name}}</h3>
                   </section>
                   <section class="subs">
                       <div>
@@ -35,10 +35,21 @@
         <div class="col-xl">
           <div class="right">
               <div class='content'>
-                  <p align='center'>Вы пока не добавляли свои рецепты.</p>
-                  <p style="display:flex;"><img src="{% static 'user_profile/img/cheif.png' %}" alt='cheif'></p>
-                  <p style="display:flex;"><a href="#"><button type="button">Добавить рецепт</button></a></p>
-                  <p align='center'>Добавляйте свои рецепты и истории к ним. <br>Возможно, именно ваш рецепт сделает кого-то счастливым!</p>
+                  <nav>
+                      <button type="button" class='nav-btn' id='myRecipes'>Мои рецпеты</button>
+                      <button type="button" class='nav-btn' id='myfolovers'>Подписчики</button>
+                      <button type="button" class='nav-btn' id='mySubscriptions'>Подписки</button>
+                      <button type="button" class='nav-btn' id='aboutMe'>Обо мне</button>
+                  </nav><br>
+                  <div class="recipes">
+                      <p align='center'>Вы пока не добавляли свои рецепты.</p>
+                      <p style="display:flex;"><img src="{% static 'user_profile/img/cheif.png' %}" alt='cheif'></p>
+                      <p style="display:flex;"><a href="/recipes/addRecipe/"><button type="button">Добавить рецепт</button></a></p>
+                      <p align='center'>Добавляйте свои рецепты и истории к ним. <br>Возможно, именно ваш рецепт сделает кого-то счастливым!</p>
+                  </div>
+                  <div class="folovers">2</div>
+                  <div class="subscriptions">3</div>
+                  <div class="about">4</div>
               </div>
           </div>
         </div>

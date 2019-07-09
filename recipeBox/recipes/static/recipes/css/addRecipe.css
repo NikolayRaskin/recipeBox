@@ -1,0 +1,11 @@
+.addForm {
+  background-color: #273440;
+  color: #EBEEF2;
+  display: flex;
+  padding-top: 5%;
+}
+.addForm div {
+  margin: auto;
+}
+
+/*# sourceMappingURL=addRecipe.css.map */

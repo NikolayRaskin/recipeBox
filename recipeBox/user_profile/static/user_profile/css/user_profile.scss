@@ -59,6 +59,42 @@ $back-color: #273440;
         width: 100%;
         .content{
             margin: auto;
+            width: 100%;
+            nav{
+                .nav-btn{
+                    width: 140px;
+                    background-color: $back-color;
+                    border-left: 0;
+                    border-bottom: 1px solid;
+                    border-right: 0;
+                    border-top: 0 ;
+                    border-color: grey;
+                    border-radius: 90px 90px 0 0;
+                    color: $text-color;
+                    &:hover{
+                        border-color: $text-color;
+                        transition: all 1s;
+                    }
+                }
+                #myRecipes{
+                    background-color: #3F4EA6;
+                }
+            }
+            .recipes{
+                height: 500px;
+            }
+            .folovers{
+                display:none;
+                height: 500px;
+            }
+            .subscriptions{
+                display:none;
+                height: 500px;
+            }
+            .about{
+                display:none;
+                height: 500px;
+            }
             img{
                 width: 300px;
                 margin: auto;

@@ -1,0 +1,18 @@
+{% extends 'mainPage/mainTemple.html' %}
+{% block content %}
+<section class="addForm">
+    <div>
+        <h1>Новый рецепт</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div>
+                <p>Название блюда:<br> {{form.title}}</p>
+                <p>Тип блюда: {{form.typeOfDish}}</p>
+                <p>Вид мяса:<br> {{form.kindOfMeat}}</p>
+                <p>Вид рыбы:<br> {{form.kindOfFish}}</p>
+            </div>
+            <div style="display:flex;"><button type="submit">Опубликовать</button></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

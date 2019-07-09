@@ -31,7 +31,6 @@ class PostBase(models.Model):
  
     author = models.ForeignKey(User, verbose_name=_("Автор"),on_delete=models.PROTECT)
     title = models.CharField(_('Заголовок'),max_length=100)
-    slug = models.SlugField()
     ingredients = models.TextField(_('Ингредиенты'))
     cookingDescription = models.TextField(_('Рецепт'))
     cookingDifficulty = models.CharField(_('Уровень сложности'),choices=LEVEL_CHOICES,max_length=100)
