@@ -3,7 +3,7 @@
 <section class="addForm">
     <div>
         <h1 align='center'>Новый рецепт</h1>
-        <form method="post" action="">
+        <form method="post" action="{% url 'addRecipe' %}">
             {% csrf_token %}
             <div>
                 <p align='center'>Название блюда:<br><br> {{form.title}}</p>
