@@ -22,8 +22,16 @@
 .addForm div p .kols input {
   width: 50px;
 }
+.addForm div p .kols select {
+  width: 120px;
+  height: 33px;
+}
 .addForm div p .ingElem {
   display: none;
+}
+.addForm div p #addIng:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 .addForm div #kindOfMeat {
   display: none;
