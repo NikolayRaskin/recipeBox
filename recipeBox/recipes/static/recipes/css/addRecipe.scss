@@ -1,0 +1,48 @@
+$text-color: #EBEEF2;
+$back-color: #273440;
+.addForm{
+    background-color: $back-color;
+    color: $text-color;
+    display: flex;
+    padding-top: 5%;
+    div{
+        margin: auto;
+        p{
+            .line{
+                margin: auto;    
+            }
+            input{
+                width: 300px;
+            }
+            select{
+                width: 300px;
+            }
+            div{
+                button{
+                    width: 300px;
+                } 
+            }
+            .kols{
+                input{
+                    width: 50px;
+                }
+            }
+            .ingElem{
+                display: none;
+            }
+        }
+        #kindOfMeat{
+            display: none;
+        }
+        #kindOfFish{
+            display: none;
+        }
+        ul{
+            display: flex;
+            li{
+                margin: auto;
+                list-style-type: none;
+            }
+        }
+    }
+}

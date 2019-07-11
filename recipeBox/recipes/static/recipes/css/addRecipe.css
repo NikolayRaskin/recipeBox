@@ -1,0 +1,42 @@
+.addForm {
+  background-color: #273440;
+  color: #EBEEF2;
+  display: flex;
+  padding-top: 5%;
+}
+.addForm div {
+  margin: auto;
+}
+.addForm div p .line {
+  margin: auto;
+}
+.addForm div p input {
+  width: 300px;
+}
+.addForm div p select {
+  width: 300px;
+}
+.addForm div p div button {
+  width: 300px;
+}
+.addForm div p .kols input {
+  width: 50px;
+}
+.addForm div p .ingElem {
+  display: none;
+}
+.addForm div #kindOfMeat {
+  display: none;
+}
+.addForm div #kindOfFish {
+  display: none;
+}
+.addForm div ul {
+  display: flex;
+}
+.addForm div ul li {
+  margin: auto;
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=addRecipe.css.map */
