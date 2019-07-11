@@ -26,9 +26,17 @@ $back-color: #273440;
                 input{
                     width: 50px;
                 }
+                select{
+                    width: 120px;
+                    height: 33px;
+                }
             }
             .ingElem{
                 display: none;
+            }
+            #addIng:hover{
+                cursor: pointer;
+                text-decoration: underline;
             }
         }
         #kindOfMeat{

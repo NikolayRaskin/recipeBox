@@ -7,6 +7,7 @@
             {% csrf_token %}
             <div>
                 <p align='center'>Название блюда:<br><br> {{form.title}}</p>
+                <p align='center'>Происхождение<br><br>{{form.country}}</p>
                 <p align='center'>Категория блюда:<br><br> {{form.kindOfDish}}</p>
                 <p align='center'><span>Тип блюда: {{form.typeOfDish}}</span></p>
                 <p id="kindOfMeat" align='center'>Вид мяса:<br><br> {{form.kindOfMeat}}</p>
@@ -14,49 +15,50 @@
                 <p align='center'>Игредиенты:<br></p>
                 <p align='center'>
                     <span class="ingElemFirst">
-                        <span id="count">1</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">1</span>. {{form.nameOfIngrediants1}} : <span class="kols">{{form.countOfIngrediants1}} {{form.calcUnitOfIngrediants1}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem2'>
                         <br>
-                        <span id="count">2</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">2</span>. {{form.nameOfIngrediants2}} : <span class="kols">{{form.countOfIngrediants2}} {{form.calcUnitOfIngrediants2}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem3'>
                         <br>
-                        <span id="count">3</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">3</span>. {{form.nameOfIngrediants3}} : <span class="kols">{{form.countOfIngrediants3}} {{form.calcUnitOfIngrediants3}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem4'>
                         <br>
-                        <span id="count">4</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">4</span>. {{form.nameOfIngrediants4}} : <span class="kols">{{form.countOfIngrediants4}} {{form.calcUnitOfIngrediants4}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem5'>
                         <br>
-                        <span id="count">5</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">5</span>. {{form.nameOfIngrediants5}} : <span class="kols">{{form.countOfIngrediants5}} {{form.calcUnitOfIngrediants5}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem6'>
                         <br>
-                        <span id="count">6</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">6</span>. {{form.nameOfIngrediants6}} : <span class="kols">{{form.countOfIngrediants6}} {{form.calcUnitOfIngrediants6}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem7'>
                         <br>
-                        <span id="count">7</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">7</span>. {{form.nameOfIngrediants7}} : <span class="kols">{{form.countOfIngrediants7}} {{form.calcUnitOfIngrediants7}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem8'>
                         <br>
-                        <span id="count">8</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">8</span>. {{form.nameOfIngrediants8}} : <span class="kols">{{form.countOfIngrediants8}} {{form.calcUnitOfIngrediants8}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem9'>
                         <br>
-                        <span id="count">9</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">9</span>. {{form.nameOfIngrediants9}} : <span class="kols">{{form.countOfIngrediants9}} {{form.calcUnitOfIngrediants9}}</span><br>
                     </span>
                     <span class="ingElem" id='ingElem10'>
                         <br>
-                        <span id="count">10</span>. {{form.nameOfIngrediants}} : <span class="kols">{{form.countOfIngrediants}}</span> грамм.<br>
+                        <span id="count">10</span>. {{form.nameOfIngrediants10}} : <span class="kols">{{form.countOfIngrediants10}} {{form.calcUnitOfIngrediants10}}</span><br>
                     </span>
                     <span id='addIng'>добавить игредиент</span>
                 </p>
                 <p align='center'>Инструкция:<br><br>{{form.instruction}}</p>
                 <p align='center'>Примечание:<br><br>{{form.description}}</p>
                 <p align='center'>Время приготовления:<br><br><span class="kols">{{form.oursForCooking}}</span> час(ов). <span class="kols">{{form.minutsForCooking}}</span> минут.</p>
+                <p align='center'>Уовень сложности:<br><br>{{form.level}}</p><br>
             </div>
             <div style="display:flex;"><button style="margin:auto" type="reset" class="btn btn-danger">Очистить форму</button> <button style="margin:auto" type="button" class="btn btn-info">Pre-view</button> <button style="margin:auto" type="submit" class="btn btn-success">Опубликовать</button></div>
         </form>
