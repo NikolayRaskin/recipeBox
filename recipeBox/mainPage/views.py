@@ -8,13 +8,30 @@ from django.conf import settings
 from .regForm import RegForm
 from .email_passResetForm import EmailPassResetForm
 from .passChangeForm import PassChangeForm
+from recipes.models import MeatDish,FishDish,VeganDish
 
 from django.contrib import messages
 
 import re
 
 def mainPage(request):
-    return render(request,'mainPage/mainPage.html')
+    easy_to_cook = []
+    if MeatDish.objects.filter(level='Уровень 1'):
+        easy_to_cook.append(MeatDish.objects.filter(level='Уровень 1'))
+    if FishDish.objects.filter(level='Уровень 1'):
+        easy_to_cook.append(FishDish.objects.filter(level='Уровень 1'))
+    if VeganDish.objects.filter(level='Уровень 1'):
+        easy_to_cook.append(VeganDish.objects.filter(level='Уровень 1'))
+    context = {
+        'easy_to_cook':easy_to_cook,
+    }
+    print('easy_to_cook:')
+    for i in range(len(easy_to_cook)):
+        for j in range(len(easy_to_cook[i])):
+            print(type(easy_to_cook[i][j].ingredients))
+            #print(easy_to_cook[i][j].title + '\nIngreditnts ' +  + '\n' )
+    #print(easy_to_cook)
+    return render(request,'mainPage/mainPage.html',context)
 
 def register(request):
     if request.method == 'POST':

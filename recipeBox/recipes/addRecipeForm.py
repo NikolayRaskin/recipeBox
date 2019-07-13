@@ -38,7 +38,7 @@ LEVEL = (
     ('Уровень 3', 'Уровень 3'),
 )
 
-COUNTRYS = [ ('Беларусь','Беларусь'),('Россия','Россия'),('США','США'),('Италия','Италия'),('Испания','Испания'),('Австралия','Австралия'),                ('Кубань','Кубань'),('Германия','Германия'),('Китай','Китай'),('Япония','Япония'),('Корея','Корея'),('Нидерланды','Нидерланды'),              ('Франция','Франция'),('Канада','Канада'),('Мексика','Мексика') ]
+COUNTRYS = [ ('Беларусь','Беларусь'),('Россия','Россия'),('США','США'),('Италия','Италия'),('Испания','Испания'),('Австралия','Австралия'),                ('Кубань','Кубань'),('Германия','Германия'),('Китай','Китай'),('Япония','Япония'),('Корея','Корея'),('Нидерланды','Нидерланды'),              ('Франция','Франция'),('Канада','Канада'),('Мексика','Мексика'),('Индия','Индия'),('Греция','Греция'),('Тайланд','Тайланд') ]
 
 COUNTRYS.sort()
 COUNTRYS = tuple(COUNTRYS)
@@ -101,7 +101,7 @@ class AddRecipeForm(forms.Form):
     #----------------------------------------------
     instruction = forms.CharField(max_length=5000, widget=forms.Textarea)
     description = forms.CharField(max_length=5000, widget=forms.Textarea,required=False)
-    oursForCooking = forms.IntegerField(required=False)
+    oursForCooking = forms.IntegerField(required=False,initial=None)
     minutsForCooking = forms.IntegerField()
     level = forms.ChoiceField(widget=forms.Select,choices=LEVEL)
     

@@ -30,7 +30,9 @@ def addRecipe(request):
             level = form.cleaned_data['level']
             
             for i in range(len(names)):
-                ings.append({str(i) + '. ' + str(names[i]):str(counts[i]) + ' ' + calcs[i]})
+                name = str(names[i])
+                calc = str(counts[i]) + ' ' + calcs[i]
+                ings.append({name:calc})
             
             if typeOfDish == 'Мясное':
                 new_recipe = MeatDish()
