@@ -93,12 +93,23 @@ $back-color: #273440;
     height: 100%;
     color: $text-color;
     padding-top: 20px;
-    .cards{
+}
+.cards{
         display: flex;
+}
+.card{
+    color: black;
+    height: 450px;
+    display: inline-block;
+    margin: auto;
+    .card-text{
+        height: 50px;
     }
-    .card{
-        display: inline-block;
-        margin: auto;
+    footer{
+        p{
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 

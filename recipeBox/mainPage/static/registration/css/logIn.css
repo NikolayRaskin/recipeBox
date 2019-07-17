@@ -2,10 +2,11 @@
   background-color: #273440;
   display: flex;
   color: #EBEEF2;
+  height: 100%;
 }
 .out .in {
   margin: auto;
-  height: 650px;
+  height: 100%;
   width: 500px;
   display: flex;
 }

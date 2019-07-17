@@ -85,12 +85,23 @@
   color: #EBEEF2;
   padding-top: 20px;
 }
-.easyToCook .cards {
+
+.cards {
   display: flex;
 }
-.easyToCook .card {
+
+.card {
+  color: black;
+  height: 450px;
   display: inline-block;
   margin: auto;
+}
+.card .card-text {
+  height: 50px;
+}
+.card footer p {
+  margin: 0;
+  padding: 0;
 }
 
 .forFamily {

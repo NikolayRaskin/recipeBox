@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import MeatDish,FishDish,VeganDish
+from .models import Recipes
 
 # Register your models here.
-admin.site.register(MeatDish)
-admin.site.register(FishDish)
-admin.site.register(VeganDish)
+admin.site.register(Recipes)

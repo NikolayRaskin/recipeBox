@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from .addRecipeForm import AddRecipeForm
-from .models import MeatDish,FishDish,VeganDish
+from .models import Recipes
 
 @login_required
 def addRecipe(request):
@@ -34,15 +34,7 @@ def addRecipe(request):
                 calc = str(counts[i]) + ' ' + calcs[i]
                 ings.append({name:calc})
             
-            if typeOfDish == 'Мясное':
-                new_recipe = MeatDish()
-                new_recipe.kindOfMeat = kindOfMeat
-            elif typeOfDish == 'Рыбное':
-                new_recipe = FishDish()
-                new_recipe.kindOfFish = kindOfFish
-            elif typeOfDish == 'Вегетарианское':
-                new_recipe = VeganDish()
-                
+            new_recipe = Recipes()    
             new_recipe.author = request.user
             new_recipe.title = title
             new_recipe.country = country

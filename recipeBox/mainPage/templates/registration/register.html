@@ -8,6 +8,11 @@
                     {% csrf_token %}
                         <p>Логин:<br> {{form.user_name}}</p>
                         <p>Email:<br> {{form.user_email}}</p>
+                        <p>Имя:<br> {{form.user_firstname}}</p>
+                        <p>Фамилия:<br> {{form.user_lastname}}</p>
+                        <p>Дата рождения:<br> {{form.birth_date}}</p>
+                        <p>Страна:<br> {{form.location}}</p>
+                        <p>Аватар:<br> {{form.avatar}}</p>
                         <p>Пароль:<br> {{form.password}}</p>
                         
                         

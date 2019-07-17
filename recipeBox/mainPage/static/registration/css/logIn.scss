@@ -4,10 +4,11 @@ $text-color: #EBEEF2;
     background-color: $back-color;
     display: flex;
     color: $text-color;
+    height: 100%;
     .in{
         //background-color: #636373;
         margin: auto;
-        height: 650px;
+        height: 100%;
         width: 500px;
         display: flex;
         form{
