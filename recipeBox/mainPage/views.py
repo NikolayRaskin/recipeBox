@@ -43,23 +43,17 @@ def register(request):
             
             if username_exists(user_name):
                 messages.info(request, 'Логин занят!')
-                #return render(request,'registration/register.html',{'form':form})
             elif email_exists(user_email):
                 messages.info(request, 'Email занят!')
-                #return render(request,'registration/register.html',{'form':form})
             elif user_pass != user_pass_confirm:
                 messages.info(request, 'Заданный пароль и подтверждение пароля не совпадают!')
-                #return render(request,'registration/register.html',{'form':form})
             else:
                 if len(user_pass) < 8:
                     messages.info(request, 'Пароль должен содержать не меньше 8 символов!')
-                    #return render(request,'registration/register.html',{'form':form})
                 elif re.search('[0-9]',user_pass) is None:
                     messages.info(request, 'Пароль должен содержать хотя бы одну цифру!')
-                    #return render(request,'registration/register.html',{'form':form})
                 elif re.search('[A-Z]',user_pass) is None:
                     messages.info(request, 'Пароль должен содержать хотя бы одну заглавную букву!')
-                    #return render(request,'registration/register.html',{'form':form})
                 else:
                     new_user = User_Profile()
                     new_user.user = User.objects.create_user(user_name, user_email, user_pass)
@@ -85,8 +79,6 @@ def forgot_password(request):
                 return render(request,'registration/password_reset_sendEmail_done.html')
             else:
                 messages.info(request, 'Данного email нет в базе!')
-                #return HttpResponseRedirect('/forgot_password/')
-                #return render(request,'registration/password_reset_form.html',{'form':form})
     else:
         form = EmailPassResetForm()
     return render(request,'registration/password_reset_form.html',{'form':form})
@@ -104,13 +96,10 @@ def reset_password(request,user_name):
             else:
                 if len(password) < 8:
                     messages.info(request, 'Пароль должен содержать не меньше 8 символов!')
-                    #return HttpResponseRedirect('/reset_password/'+user_name)
                 elif re.search('[0-9]',password) is None:
                     messages.info(request, 'Пароль должен содержать хотя бы одну цифру!')
-                    #return HttpResponseRedirect('/reset_password/'+user_name)
                 elif re.search('[A-Z]',password) is None:
                     messages.info(request, 'Пароль должен содержать хотя бы одну заглавную букву!')
-                    #return HttpResponseRedirect('/reset_password/'+user_name)
                 else:
                     user.set_password(password)
                     user.save()

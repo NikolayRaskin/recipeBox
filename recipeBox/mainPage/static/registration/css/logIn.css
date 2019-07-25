@@ -2,7 +2,7 @@
   background-color: #273440;
   display: flex;
   color: #EBEEF2;
-  height: 100vh;
+  min-height: 100vh;
 }
 .out .in {
   margin: auto;

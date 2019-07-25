@@ -4,7 +4,7 @@ $text-color: #EBEEF2;
     background-color: $back-color;
     display: flex;
     color: $text-color;
-    height: 100vh;
+    min-height: 100vh;
     .in{
         //background-color: #636373;
         margin: auto;
