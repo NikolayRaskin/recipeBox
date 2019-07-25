@@ -1,90 +1,124 @@
 {% extends 'mainPage/mainTemple.html' %}
 {% load static %}
 {% block content %}
-<section class="user_profile"><br><br>
+<section class="user_profile">
     <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <div class="left">
-              <div class='content'>
-                  <section class="img">
-                      <img src="{% static 'user_profile/img/my.jpg' %}">
-                  </section>
-                  <section class="user_name">
-                      <h3 style="margin:auto;">{{userProfile.user_firstname}} {{userProfile.user_lastname}}</h3>
-                  </section>
-                  <section class="subs">
-                      <div>
-                          <p><span>0</span></p>
-                          <p>Подписчики</p>
-                      </div>
-                      <div>
-                          <p><span>0</span></p>
-                          <p>Подписки</p>
-                      </div>
-                  </section>
-                  <section class="edit" style="margin-top: 70px;">
-                      <span style="margin:auto;"><a href="/recipes/addRecipe/"><button>Добавить рецепт</button></a></span>
-                  </section>
-                  <section class="edit">
-                      <span style="margin:auto;"><a href="#"><button>Редактировать</button></a></span>
-                  </section>
-                  <section class="edit">
-                      <span style="margin:auto;"><a href="/accounts/logout/"><button>Выйти</button></a></span>
-                  </section>
-              </div>
-          </div>
-        </div>
-        <div class="col-xl">
-          <div class="right">
-              <div class='content'>
-                  <nav>
-                      <button type="button" class='nav-btn' id='myRecipes'>Мои рецпеты</button>
-                      <button type="button" class='nav-btn' id='myfolovers'>Подписчики</button>
-                      <button type="button" class='nav-btn' id='mySubscriptions'>Подписки</button>
-                      <button type="button" class='nav-btn' id='aboutMe'>Обо мне</button>
-                  </nav><br>
-                  {% if user_recipes %}
-                      <section class="user_recipes">
-                        <div class="recipes">
-                            {% for i in user_recipes %}
+        <div class="row">
+            <div class="col-3">
+                <div class="left">
+                    <div class='content'>
+                        <section class="img">
+                            <img src="{% static 'user_profile/img/my.jpg' %}">
+                        </section>
+                        <section class="user_name">
+                            <h3 style="margin:auto;">{{userProfile.user_firstname}} {{userProfile.user_lastname}}</h3>
+                        </section>
+                        <section class="subs">
+                            <div>
+                                <p><span>0</span></p>
+                                <p>Подписчики</p>
+                            </div>
+                            <div>
+                                <p><span>0</span></p>
+                                <p>Подписки</p>
+                            </div>
+                        </section>
+                        <section class="edit" style="margin-top: 70px;">
+                            <span style="margin:auto;"><a href="/recipes/addRecipe/"><button><span style="margin:auto;">Добавить рецепт</span></button></a></span>
+                        </section>
+                        <section class="edit">
+                            <span style="margin:auto;"><a href="#"><button><span style="margin:auto;">Редактировать</span></button></a></span>
+                        </section>
+                        <section class="edit">
+                            <span style="margin:auto;"><a href="/accounts/logout/"><button><span style="margin:auto;">Выйти</span></button></a></span>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl">
+                <div class="right">
+                    <div class='content'>
+                        <nav>
+                            <button class='nav-btn' id='myRecipes' type="button">Мои рецпеты</button> <button class='nav-btn' id='myfolovers' type="button">Подписчики</button> <button class='nav-btn' id='mySubscriptions' type="button">Подписки</button> <button class='nav-btn' id='aboutMe' type="button">Обо мне</button>
+                        </nav><br>
+                        {% if user_recipes %}
+                        <section class="user_recipes">
+                            <div class="recipes">
+                                {% for i in user_recipes %}
                                 <div class="recipe">
-                                    <div class="user_recipe_img">
-                                        <img src="{% static 'mainPage/img/africanDish.jpg' %}" class="card-img-top" alt="{{i.title}}">
-                                    </div>
+                                    <div class="user_recipe_img"><img alt="{{i.title}}" class="card-img-top" src="{% static 'mainPage/img/africanDish.jpg' %}"></div>
                                     <div class="info">
                                         <div class="user_recipe_title">
-                                            <div class="typeAndFrom">{{i.kindOfDish}} | {{i.country}}</div>
-                                            <span>{{i.title}}</span>
+                                            <div class="typeAndFrom">
+                                                {{i.kindOfDish}} | {{i.country}}
+                                            </div>
+                                            <span>{{i.title}} </span>
+                                            <span class='time'><img alt="time" src="{% static 'user_profile/img/time.png' %}"> {{i.oursForCooking}} час(ов) : {{i.minutsForCooking}} минут(ы)</span>
                                         </div>
                                         <div class="user_recipe_calories">
-                                            <div>Калории</div>
-                                            <div>100</div>
+                                            <div class="cals">
+                                                <div>
+                                                    Калории
+                                                </div>
+                                                <div>
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="belki">
+                                                <div>
+                                                    Белки
+                                                </div>
+                                                <div>
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="fat">
+                                                <div>
+                                                    Жиры
+                                                </div>
+                                                <div>
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="uglevodi">
+                                                <div>
+                                                    Углеводы
+                                                </div>
+                                                <div>
+                                                    100
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="user_recipe_fat">
-                                            <span>Дата публикации: {{i.pub_date}}</span>
+                                            <div>
+                                                Дата публикации: {{i.pub_date}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-                            qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>qwe<br>
+                                {% endfor %}
+                            </div>
+                        </section>{% else %}
+                        <div class="recipes">
+                            <p align='center'>Вы пока не добавляли свои рецепты.</p>
+                            <p style="display:flex;"><img alt='cheif' src="{% static 'user_profile/img/cheif.png' %}"></p>
+                            <p style="display:flex;"><a href="/recipes/addRecipe/"><button type="button">Добавить рецепт</button></a></p>
+                            <p align='center'>Добавляйте свои рецепты и истории к ним.<br>
+                            Возможно, именно ваш рецепт сделает кого-то счастливым!</p>
+                        </div>{% endif %}
+                        <div class="folovers">
+                            2
                         </div>
-                      </section>
-                  {% else %}
-                      <div class="recipes">
-                          <p align='center'>Вы пока не добавляли свои рецепты.</p>
-                          <p style="display:flex;"><img src="{% static 'user_profile/img/cheif.png' %}" alt='cheif'></p>
-                          <p style="display:flex;"><a href="/recipes/addRecipe/"><button type="button">Добавить рецепт</button></a></p>
-                          <p align='center'>Добавляйте свои рецепты и истории к ним. <br>Возможно, именно ваш рецепт сделает кого-то счастливым!</p>
-                      </div>
-                  {% endif %}
-                  <div class="folovers">2</div>
-                  <div class="subscriptions">3</div>
-                  <div class="about">4</div>
-              </div>
-          </div>
+                        <div class="subscriptions">
+                            3
+                        </div>
+                        <div class="about">
+                            4
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 </section>
 {% endblock %}

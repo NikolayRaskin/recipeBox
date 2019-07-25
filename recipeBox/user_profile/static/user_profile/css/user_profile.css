@@ -1,13 +1,16 @@
 .user_profile {
   background-color: #273440;
   color: #EBEEF2;
-  height: 700px;
+  min-height: 100vh;
+}
+.user_profile .container {
+  padding-top: 20px;
 }
 .user_profile .left {
   display: flex;
   border-right: 1px solid;
   border-color: #EBEEF2;
-  height: 500px;
+  height: 100%;
   padding-right: 20px;
 }
 .user_profile .left .content {
@@ -44,18 +47,17 @@
   padding-top: 20px;
 }
 .user_profile .left .content .edit a button {
-  width: 150px;
+  width: 200px;
   background-color: #3F4EA6;
   border-color: #3F4EA6;
   color: #EBEEF2;
 }
 .user_profile .right {
   display: flex;
-  height: 300px;
+  height: 100%;
   width: 100%;
 }
 .user_profile .right .content {
-  margin: auto;
   width: 100%;
 }
 .user_profile .right .content nav .nav-btn {
@@ -77,7 +79,6 @@
   background-color: #3F4EA6;
 }
 .user_profile .right .content .recipes {
-  min-height: 500px;
   display: flex;
   flex-direction: column;
 }
@@ -104,12 +105,27 @@
   font-family: cursive;
   margin-left: 10px;
 }
+.user_profile .right .content .recipes .recipe .info .user_recipe_title .time {
+  font-size: 16px;
+  font-family: serif;
+  margin-left: 15px;
+}
+.user_profile .right .content .recipes .recipe .info .user_recipe_title .time img {
+  width: 5%;
+}
 .user_profile .right .content .recipes .recipe .info .user_recipe_title .typeAndFrom {
   font-size: 12px;
   font-family: sans-serif;
   color: green;
   margin: 0;
   padding: 0;
+}
+.user_profile .right .content .recipes .recipe .info .user_recipe_calories {
+  display: flex;
+  justify-content: space-between;
+}
+.user_profile .right .content .recipes .recipe .info .user_recipe_calories .cals {
+  margin: 0;
 }
 .user_profile .right .content .folovers {
   display: none;

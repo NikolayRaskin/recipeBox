@@ -116,7 +116,7 @@ USE_L10N = False
 
 USE_TZ = True
 
-DATETIME_FORMAT = 'd.m.Y | H:i'
+DATETIME_FORMAT = 'd.m.Y'
 
 
 # Static files (CSS, JavaScript, Images)
