@@ -19,8 +19,7 @@ import re
 import datetime
 
 def mainPage(request):
-    easy_to_cook = []
-    easy_to_cook.append(Recipes.objects.filter(level='Уровень 1'))
+    easy_to_cook = Recipes.objects.filter(level='Уровень 1')
     context = {
         'easy_to_cook':easy_to_cook,
     }

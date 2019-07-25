@@ -124,23 +124,22 @@
     
     <section class="easyToCook">
         <div style="display:flex"><span style="margin:auto;"><h2>Легко приготовить</h2></span></div>
+        
         <div class="cards">
-            {% for post in easy_to_cook %}
-               {% for i in post %}
-                    <div class="card" style="width: 18rem;">
-                      <img src="{% static 'mainPage/img/africanDish.jpg' %}" class="card-img-top" alt="{{i.title}}">
-                      <div class="card-body">
-                        <h5 class="card-title">{{i.title}}</h5>
-                        <p class="card-text">{{i.description}}</p>
-                        <a href="#" class="btn btn-primary">Добавить в избранное</a>
-                        <br><br>
-                        <footer>
-                            <p>[callories]</p> 
-                            <p>{{i.oursForCooking}} час(ов) : {{i.minutsForCooking}} минут(ы)</p>
-                        </footer>
-                      </div>
-                    </div>
-                {% endfor %}
+            {% for i in easy_to_cook %}
+                <div class="card" style="width: 18rem;">
+                  <img src="{% static 'mainPage/img/africanDish.jpg' %}" class="card-img-top" alt="{{i.title}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{i.title}}</h5>
+                    <p class="card-text">{{i.description}}</p>
+                    <a href="#" class="btn btn-primary">Добавить в избранное</a>
+                    <br><br>
+                    <footer>
+                        <p>[callories]</p> 
+                        <p>{{i.oursForCooking}} час(ов) : {{i.minutsForCooking}} минут(ы)</p>
+                    </footer>
+                  </div>
+                </div>
             {% endfor %}
         </div>
         <footer><div style="display:flex"><span style="margin:auto;">Показать больше...</span></div></footer>

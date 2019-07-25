@@ -7,8 +7,10 @@ $back-color: #273440;
     height: 700px;
     .left{
         display:flex;
+        
         border-right: 1px solid;
         border-color: $text-color;
+        
         height: 500px;
         padding-right:20px;
         .content{
@@ -55,6 +57,7 @@ $back-color: #273440;
     }
     .right{
         display:flex;
+        
         height: 300px;
         width: 100%;
         .content{
@@ -63,14 +66,16 @@ $back-color: #273440;
             nav{
                 .nav-btn{
                     width: 140px;
+                    
                     background-color: $back-color;
+                    color: $text-color;
+                    
                     border-left: 0;
                     border-bottom: 1px solid;
                     border-right: 0;
                     border-top: 0 ;
                     border-color: grey;
                     border-radius: 90px 90px 0 0;
-                    color: $text-color;
                     &:hover{
                         border-color: $text-color;
                         transition: all 1s;
@@ -81,7 +86,44 @@ $back-color: #273440;
                 }
             }
             .recipes{
-                height: 500px;
+                min-height: 500px;
+                display: flex;
+                flex-direction: column;
+                .recipe{
+                    display: flex;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid;
+                    .user_recipe_img{
+                        margin-left: -0.3px;
+                        img{
+                            width: 200px;
+                            height: 160px;
+                            
+                            border-radius: 10%;
+                        }
+                    }
+                    div{
+                        align-self: center;
+                        margin-left: 6px;
+                    }
+                    .info{
+                        .user_recipe_title{
+                            font-size: 28px;
+                            font-family: cursive;
+                            
+                            margin-left: 10px;
+                            
+                            .typeAndFrom{
+                                font-size: 12px;
+                                font-family: sans-serif;
+                                color: green;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
             }
             .folovers{
                 display:none;

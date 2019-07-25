@@ -61,13 +61,13 @@
 .user_profile .right .content nav .nav-btn {
   width: 140px;
   background-color: #273440;
+  color: #EBEEF2;
   border-left: 0;
   border-bottom: 1px solid;
   border-right: 0;
   border-top: 0;
   border-color: grey;
   border-radius: 90px 90px 0 0;
-  color: #EBEEF2;
 }
 .user_profile .right .content nav .nav-btn:hover {
   border-color: #EBEEF2;
@@ -77,7 +77,39 @@
   background-color: #3F4EA6;
 }
 .user_profile .right .content .recipes {
-  height: 500px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.user_profile .right .content .recipes .recipe {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+}
+.user_profile .right .content .recipes .recipe .user_recipe_img {
+  margin-left: -0.3px;
+}
+.user_profile .right .content .recipes .recipe .user_recipe_img img {
+  width: 200px;
+  height: 160px;
+  border-radius: 10%;
+}
+.user_profile .right .content .recipes .recipe div {
+  align-self: center;
+  margin-left: 6px;
+}
+.user_profile .right .content .recipes .recipe .info .user_recipe_title {
+  font-size: 28px;
+  font-family: cursive;
+  margin-left: 10px;
+}
+.user_profile .right .content .recipes .recipe .info .user_recipe_title .typeAndFrom {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: green;
+  margin: 0;
+  padding: 0;
 }
 .user_profile .right .content .folovers {
   display: none;
